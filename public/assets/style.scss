@@ -1,0 +1,217 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin minwidth($width) {
+    @media only screen and (min-width:$width) {
+        @content;
+    }
+}
+
+.nav-link {
+    font-size: 20px;
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    background-attachment: fixed;
+}
+
+.overlayer {
+    background-color: rgba(45, 45, 219, 0.479);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testbox h2 {
+    font-size: 60px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+.testbox p {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.testbox {
+    color: #fff;
+}
+
+
+
+
+header {
+    .navbar-toggler {
+        margin-left: auto;
+        background-color: lightseagreen;
+    }
+
+    .auth {
+
+        // width: 150px;
+        .nav-item {
+            width: 50%;
+            padding: 0px 5px;
+            text-align: center;
+
+            a {
+                padding: 5px 15px;
+                border: 0px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.font-page-banner {
+    .textbox {
+        color: #fff;
+
+        h2 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        @include minwidth(567px) {
+            h2 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @include minwidth(992px) {
+            h2 {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+        }
+
+    }
+}
+
+.dietsection {
+    background-color: #695ae0;
+
+    @include minwidth(992px) {
+        padding: 50px 0px;
+    }
+
+    .textbox {
+        color: #fff;
+
+        h2 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        @include minwidth(567px) {
+            h2 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @include minwidth(992px) {
+            h2 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+        }
+
+    }
+}
+
+.dietcategory {
+    .innerimage {
+        background-color: #695ae0;
+        color: #fff;
+        padding: 60px;
+        h3{
+            font-size: 22px;
+        }
+        a {
+            color: #afdae2;
+            font-size: 18px;
+
+            @include minwidth(992px) {
+                font-size: 22px;
+            }
+        }
+        @include minwidth(992px){
+            h3{
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+
+.categorylisttable {
+    .imagebox {
+        width: 150px;
+    }
+
+    td {
+        .image {
+            width: 150px;
+        }
+        .readmorelink{
+            font-size: 14px;
+            text-decoration: underline!important;
+
+        }
+    }
+
+    @include minwidth(992px) {
+        td {
+            .image {
+                width: 150px;
+            }
+            .readmorelink{
+                font-size: 18px;
+            }
+        }
+
+    }
+   
+}
+
+
+.showdata{
+    tr>td{
+        img{
+            width: 500px;
+            max-width: 100%;
+        }
+    }
+}
+
+.recipesinglesection{
+    td>img{
+        width: 600px;
+        max-width: 100%;
+    }
+}
